@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+
+.example-wrapper {
+  padding: 16px 120px;
+}
+
+.example-emoji {
+  font-size: 64px;
+  width: 64px;
+  height: 64px;
+}
