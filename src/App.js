@@ -1,36 +1,58 @@
 import logo from './logo.svg';
+import { useMemo }  from 'react';
+import ReactTable from "react-table";
 import './App.css';
-import TextArea from './component/TextArea/textArea'; 
-import Tooltip  from './component/Tooltip/tooltip';
+import PropTypes from "prop-types";
+import TextArea from './component/TextArea/textArea';
+import Tooltip from './component/Tooltip/tooltip';
+import Pagination from './component/Table/pagination';
+import MOCK_DATA from "./database/MOCK_DATA.json";
+
+
+
 
 function App() {
+  
+
+  
+
   return (
-    <div className="App" className="p-6 items-center justify-center">
-        <h1 className="text-blue-400 font-extrabold">Hello There</h1>
-        <p className="tracking-widest">This is TextArea</p>
-
-        <TextArea
-          label="Label"
-          placeholder="This input quite long"
-          rows="1"
-          cols="20"
-          isResize={true}  >
-        </TextArea>
-        <h1 className="text-blue-400 font-extrabold">This is Tooltip </h1>
-        <p className="tracking-widest">This is TextArea</p>
-
-        <div className="example-wrapper">
-        <Tooltip content="Yee-haw!" direction="bottom" trigger="hover">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-        </Tooltip>
+    <div className="App " className="p-6 items-center justify-center">
+      <h1 className="text-blue-400 font-extrabold ">Hello There</h1>
+      <p className="tracking-widest">This is TextArea</p>
+      <div className="bg-background content-center  ">
+      <TextArea
+        label="Label"
+        placeholder="This input quite long"
+        // rows="1"
+        // cols="20"
+          >
+      </TextArea>
       </div>
+      <h1 className="text-blue-400 font-extrabold">This is Tooltip </h1>
+      <p className="tracking-widest">This is TextArea</p>
+
+      <div className="">
+        <Tooltip className="m-10"  content="This is a single line tooltip with no wrapping text and" direction="none" />
+        <Tooltip className="m-10" content="This is a single line tooltip with no wrapping text and" direction="left" />
+        <Tooltip content="This is a single line tooltip with no wrapping text and" direction="top-right" />
+        <Tooltip content="This is a single line tooltip with no wrapping text and" direction="bot-mid" />
+        <Tooltip content="This is a single line tooltip with no wrapping text and" direction="bot-right" />
+        <Tooltip content="This is a single line tooltip with no wrapping text and" direction="right" />
+        <Tooltip content="This is a single line tooltip with no wrapping text and" direction="top-mid" />
+        <Tooltip content="This is a single line tooltip with no wrapping text and" direction="top-left" />
+        <Tooltip content="This is a single line tooltip with no wrapping text and" direction="bot-left" />
+          
+        
+      </div>
+
+      
     </div>
   );
 }
 
 export default App;
+// render(<App />, document.getElementById("root"));
 
 
 

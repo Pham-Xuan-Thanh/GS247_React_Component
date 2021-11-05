@@ -6,6 +6,9 @@
     --tooltip-arrow-size: 6px;
   }
   
+  .triangle {
+    
+  }
   /* Wrapping */
   .Tooltip-Wrapper {
     display: inline-block;
