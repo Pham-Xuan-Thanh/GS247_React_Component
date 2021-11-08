@@ -51,7 +51,6 @@ const classes = {
 
 const Tooltip = (props) => {
   let timeout;
-  const [active, setActive] = useState(false);
   const {
     content = "This is a single line tooltip with no wrapping text and",  //Nội dung sễ hiện thị trong text của tooltip 
     direction = "top",                                                    // Ví trí xuất hiện của tooltip: TOP-MID LEFT RIGHT BOT-MID TOP-LEFT BOT-LEFT TOP-RIGHT BOT-RIGHT 
